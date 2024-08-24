@@ -1,38 +1,12 @@
 {
+    "version":2,
+    "builds": [
+        {"src": "*.js","use": "@vercel/node"}
+    ],
     "routes": [
         {
-            "source": "/",
-            "destination": "/",
-            "children": [
-              {
-                "source": "/",
-            "destination":"/"
-              },
-              {
-                "source": "/login",
-                "destination": "/"
-              },
-              {
-                "source": "/signup",
-                "destination": "/"
-              },
-              {
-                "source": "/all-posts",
-                "destination": "/"
-              },
-              {
-                "source": "/add-post",
-                "destination": "/"
-              },
-              {
-                "source": "/edit-post/:slug",
-                "destination": "/"
-              },
-              {
-                "source": "/post/:slug",
-                "destination": "/"
-              }
-            ]
-          }
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
 }
